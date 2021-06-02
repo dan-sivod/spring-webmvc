@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <td>
+                <th:block th:each="msg : ${cars[0].getModel()}">
+                <h1 th:text="${msg}"></h1>
+                </th:block>
+            </td>
+            <td>
+                <th:block th:each="msg : ${cars[0].getFabricator()}">
+                    <h1 th:text="${msg}"></h1>
+                </th:block>
+            </td>
+            <td>
+                <th:block th:each="msg : ${cars[0].getPrice()}">
+                    <h1 th:text="${msg}"></h1>
+                </th:block>
+            </td>
+        </tr>
+    </table>>
+</div>
+
+</body>
+</html>
