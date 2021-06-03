@@ -17,6 +17,15 @@ public class Car {
         this.fabricator = fabricator;
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + model + '\'' +
+                ", price=" + price +
+                ", fabricator='" + fabricator + '\'' +
+                '}';
+    }
+
     public String getModel() {
         return model;
     }

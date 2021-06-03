@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,24 +7,41 @@
 </head>
 <body>
 <div>
-    <table>
-        <tr>
-            <td>
-                <th:block th:each="msg : ${cars[0].getModel()}">
-                <h1 th:text="${msg}"></h1>
-                </th:block>
-            </td>
-            <td>
-                <th:block th:each="msg : ${cars[0].getFabricator()}">
-                    <h1 th:text="${msg}"></h1>
-                </th:block>
-            </td>
-            <td>
-                <th:block th:each="msg : ${cars[0].getPrice()}">
-                    <h1 th:text="${msg}"></h1>
-                </th:block>
-            </td>
-        </tr>
+    <table border="1" style="width:300px">
+        <thead>
+            <tr>
+                <th scope="col">Model</th>
+                <th scope="col">Fabricator</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td th:text="${cars[0].getModel()}"></td>
+                <td th:text="${cars[0].getFabricator()}"></td>
+                <td th:text="${cars[0].getPrice()}"></td>
+            </tr>
+            <tr>
+                <td th:text="${cars[1].getModel()}"></td>
+                <td th:text="${cars[1].getFabricator()}"></td>
+                <td th:text="${cars[1].getPrice()}"></td>
+            </tr>
+            <tr>
+                <td th:text="${cars[2].getModel()}"></td>
+                <td th:text="${cars[2].getFabricator()}"></td>
+                <td th:text="${cars[2].getPrice()}"></td>
+            </tr>
+            <tr>
+                <td th:text="${cars[3].getModel()}"></td>
+                <td th:text="${cars[3].getFabricator()}"></td>
+                <td th:text="${cars[3].getPrice()}"></td>
+            </tr>
+            <tr>
+                <td th:text="${cars[4].getModel()}"></td>
+                <td th:text="${cars[4].getFabricator()}"></td>
+                <td th:text="${cars[4].getPrice()}"></td>
+            </tr>
+        </tbody>
     </table>>
 </div>
 
